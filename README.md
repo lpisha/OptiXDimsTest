@@ -13,7 +13,8 @@ states that the maximum launch size is x * y * z <= 2**30.
 In reality, some sizes below this limit also fail, producing an error like
 ```
 [ 2][       ERROR]: Error launching work to RTX
-Optix call (optixLaunch(device->pipeline, lpDD.stream, (CUdeviceptr)lpDD.deviceMemory.get(), lpDD.deviceMemory.sizeInBytes, &lpDD.sbt, dims.x,dims.y,dims.z )) failed with code 7050 (line 206)
+Optix call (optixLaunch(device->pipeline, lpDD.stream, (CUdeviceptr)lpDD.deviceMemory.get(),
+lpDD.deviceMemory.sizeInBytes, &lpDD.sbt, dims.x,dims.y,dims.z )) failed with code 7050 (line 206)
 ```
 This is presumably due to the fact that the maximum grid dimension is different
 in X and Y (at least on this GPU):
