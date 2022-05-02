@@ -8,8 +8,8 @@ but this is not related to / the cause of the bug.
 Valid ranges for raygen launch dimensions have some bizarre, undocumented
 behavior.
 
-[https://raytracing-docs.nvidia.com/optix7/guide/index.html#limits#limits](This
-page in the OptiX docs) states that the maximum launch size is x * y * z <= 2**30.
+(https://raytracing-docs.nvidia.com/optix7/guide/index.html#limits#limits)[This
+page in the OptiX docs] states that the maximum launch size is x * y * z <= 2**30.
 In reality, some sizes below this limit also fail, producing an error like
 ```
 [ 2][       ERROR]: Error launching work to RTX
